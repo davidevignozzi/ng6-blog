@@ -1,0 +1,18 @@
+.footer{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 25px;
+}
+.separator{
+    width: calc(100% - 20%);
+    margin: 0 10%;
+    height: 2px;
+    border-radius: 15px;
+    background-color: red;
+}
+p{
+    margin-right: 10%;
+    align-self: flex-end;
+    margin-top: 15px;
+}
