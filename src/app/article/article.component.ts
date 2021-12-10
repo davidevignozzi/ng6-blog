@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Article } from '../article';
 import { ArticleService } from '../article.service';
@@ -15,7 +16,8 @@ export class ArticleComponent implements OnInit {
   constructor(
     private route: ActivatedRoute,
     private articleService: ArticleService,
-    private router: Router
+    private router: Router,
+    private titleService: Title
   ) { }
 
 
@@ -31,6 +33,7 @@ export class ArticleComponent implements OnInit {
           }
 
           this.article = article;
+          this.titleService.setTitle(`${this.article.title} - Angular Blog`);
           console.log(this.article);
         }
       )

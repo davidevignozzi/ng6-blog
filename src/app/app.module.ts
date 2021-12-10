@@ -14,10 +14,10 @@ import { NotFoundComponent } from './not-found/not-found.component';
 const appRoutes: Routes = [
   { path: 'articles', component:ArticleListComponent },
   { path: 'about', component:AboutComponent },
-  { path: '404', component:NotFoundComponent },
-  { path: '**', component:NotFoundComponent },
   { path: '', component:ArticleListComponent },
   { path: ':key', component:ArticleComponent },
+  { path: '404', component:NotFoundComponent },
+  { path: '**', component:NotFoundComponent },
 ];
 
 @NgModule({
