@@ -7,23 +7,26 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { FooterComponent } from './footer/footer.component';
 import { ArticleListComponent } from './article-list/article-list.component';
 import { AboutComponent } from './about/about.component';
+import { ArticleComponent } from './article/article.component';
 
 
 const appRoutes: Routes = [
   { path: 'articles', component:ArticleListComponent },
   { path: 'about', component:AboutComponent },
-  { path: '', component:ArticleListComponent }
+  { path: '', component:ArticleListComponent },
+  { path: ':key', component:ArticleComponent }
   // { path: '', copmonent: }
 ];
 
 @NgModule({
-  declarations: [
+  declarations: [	
     AppComponent,
     NavBarComponent,
     FooterComponent,
     ArticleListComponent,
-    AboutComponent
-  ],
+    AboutComponent,
+      ArticleComponent
+   ],
   imports: [
     RouterModule.forRoot(appRoutes),
     BrowserModule

@@ -13,7 +13,7 @@
           <div class="article-info">
             <div class="meta-info">{{ article.date.toDateString() }}</div>
             <p [innerHtml]='article.description'></p>
-            <a href="#" class="contiinue-reading">Continue Reading</a>
+            <a routerLink="/{{article.key}}" class="contiinue-reading">Continue Reading</a>
           </div>        
         </div>
       </div>
