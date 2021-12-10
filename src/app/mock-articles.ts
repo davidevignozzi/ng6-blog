@@ -8,7 +8,7 @@ export const ARTICLES: Article[] = [
         description: 'prova',
         key: 'first',
         date: new Date(),
-        imageUrl: 'http://angular.io/assets/image/logos/angular/angular.png'
+        imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/c/cf/Angular_full_color_logo.svg'
     },
 
     {
@@ -18,7 +18,7 @@ export const ARTICLES: Article[] = [
         description: 'prova 2',
         key: 'second',
         date: new Date(),
-        imageUrl: 'http://angular.io/assets/image/logos/angular/angular.png'
+        imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/c/cf/Angular_full_color_logo.svg'
     },
 
     {
@@ -28,6 +28,6 @@ export const ARTICLES: Article[] = [
         description: 'prova 3',
         key: 'third',
         date: new Date(),
-        imageUrl: 'http://angular.io/assets/image/logos/angular/angular.png'
-    },
+        imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/c/cf/Angular_full_color_logo.svg'
+    }
 ];

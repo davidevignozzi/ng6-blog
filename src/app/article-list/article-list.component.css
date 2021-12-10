@@ -1,0 +1,20 @@
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-left: 10%;
+}
+
+.card:first-of-type{
+    margin-left: 0;
+}
+.card{
+    border: 2px solid red;
+    padding: 10px;
+    margin: 10px;
+}
+
+.img-container{
+    width: 300px;
+    height: 300px;
+}
