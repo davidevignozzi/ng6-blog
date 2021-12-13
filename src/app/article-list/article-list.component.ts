@@ -23,12 +23,23 @@ export class ArticleListComponent implements OnInit {
   ngOnInit() {
     this.titleService.setTitle(`${this.sharedService.blogTitle}`);
     this.getArticles();
+    this.orderArticles();
   }
 
+  // get Articles
   getArticles(): void{
     this.articleService
     .getArticles()
     .subscribe(articles => (this.articles = articles));
+  }
+
+  // Recent First
+  orderArticles(): void{
+    this.articles.sort((a,b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+
+    this.articles.forEach((article, index) => {
+      article.id = this.articles.length - (index);
+    });
   }
 
 }

@@ -1,0 +1,28 @@
+<div class="new-article">
+  <form (ngSubmit)="publishArticle()" [formGroup]="newArticleForm">
+    <div class="set-img">
+      
+    </div>
+    <div class="set-title">
+      <input type="text" id="articleTitle" #articleTitle placeholder="Title" formControlName ="articleTitle">
+    </div>
+    <div class="description">
+      <input type="text" id="ArticleDescription" placeholder="description" formControlName ="ArticleDescription">
+    </div>
+    <div class="key">
+      <input type="text" id="ArticleKey" placeholder="key" formControlName ="ArticleKey">
+    </div>
+    <div class="set-content">
+      <textarea id="ArticleContent" placeholder="Content" formControlName ="ArticleContent"></textarea>
+    </div>
+    <input type="submit" value="Publish">
+  </form>
+</div>
+
+<!-- id: index +1 
+title: 'to set',
+content: 'article content',
+description: 'Preview || First words of the content',
+key: 'To set => if(key === ''){key === title} || in the title of the page ',
+date: new Date(),
+imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/c/cf/Angular_full_color_logo.svg' -->

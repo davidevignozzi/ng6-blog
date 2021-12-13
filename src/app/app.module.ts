@@ -9,11 +9,14 @@ import { ArticleListComponent } from './article-list/article-list.component';
 import { AboutComponent } from './about/about.component';
 import { ArticleComponent } from './article/article.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { NewArticleComponent } from './new-article/new-article.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms'; //module
 
 
 const appRoutes: Routes = [
   { path: 'articles', component:ArticleListComponent },
   { path: 'about', component:AboutComponent },
+  { path: 'new', component:NewArticleComponent },
   { path: '', component:ArticleListComponent },
   { path: ':key', component:ArticleComponent },
   { path: '404', component:NotFoundComponent },
@@ -21,18 +24,21 @@ const appRoutes: Routes = [
 ];
 
 @NgModule({
-  declarations: [		
+  declarations: [			
     AppComponent,
     NavBarComponent,
     FooterComponent,
     ArticleListComponent,
     AboutComponent,
-      ArticleComponent,
-      NotFoundComponent
+    ArticleComponent,
+    NotFoundComponent,
+    NewArticleComponent
    ],
   imports: [
     RouterModule.forRoot(appRoutes),
-    BrowserModule
+    BrowserModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
