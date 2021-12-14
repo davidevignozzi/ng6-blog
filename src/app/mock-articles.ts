@@ -16,12 +16,16 @@ export const ARTICLES: Article[] = [
     
     {
         id: 1, 
-        title: 'My first article',
-        content: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus delectus veniam aliquid excepturi nihil accusantium eaque, ullam illum in officia voluptatem. Deleniti dolorem eveniet deserunt corrupti atque corporis sint unde!',
-        description: 'First Article',
+        title: 'Title',
+        content: `Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus delectus veniam aliquid excepturi nihil accusantium eaque, ullam illum in officia voluptatem. Deleniti dolorem eveniet deserunt corrupti atque corporis sint unde!
+        <br />
+        <br />
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+        `,
+        description: 'Lorem Ipsum Dolor Sit Amet Consecutor',
         key: 'First Article',
         date: new Date('December 17, 1995 03:24:00'),
-        imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/c/cf/Angular_full_color_logo.svg'
+        imageUrl: 'https://quantdare.com/wp-content/uploads/2017/10/World-connection.jpg'
     },
 
     {

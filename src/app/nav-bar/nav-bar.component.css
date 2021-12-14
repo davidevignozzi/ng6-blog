@@ -6,13 +6,13 @@ header{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     margin-bottom: 25px;
 }
 .header{
     display: flex;
     align-items: center;
-    width: calc(100% - (10%*2));
-    margin: 0 9.5%;
+    width: 100%
 }
 h1{
     font-weight: unset;
@@ -20,8 +20,6 @@ h1{
     padding: 7px;
 }
 .img-container{
-    width: 350px;
-    height: 108px;
     display: flex;
     justify-content: center;
     align-content: center;
@@ -41,14 +39,15 @@ h1{
 
 nav{
     width: 100%;
-    padding-bottom: 15px;
-    margin: 0 50px;
+    margin-top: 10px;
+    padding-bottom: 5px;
+    margin: 0 25px;
     border-bottom: 2px solid white;
 }
 nav a{
     font-size: 1.2em;
-    margin-left: 5%;
-    padding-bottom: 15px; 
+    padding-bottom: 5px;
+    margin-left: 5%; 
 }
 nav a:first-of-type{
     margin-left: 0;
@@ -60,8 +59,8 @@ nav a:hover{
 }
 
 .add-article{
-    width: 300px;
-    margin: 0 30px;
+    width: 200px;
+    margin-right: 30px;
     display: flex;
     justify-content: center;
 }
@@ -69,5 +68,5 @@ nav a:hover{
 .add-article a{
     background-color: #e93d33;
     border-radius: 30px;
-    padding: 8px 25px;
+    padding: 8px 15px;
 }
