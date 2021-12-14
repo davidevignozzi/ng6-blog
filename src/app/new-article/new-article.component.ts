@@ -5,6 +5,7 @@ import { ArticleService } from '../article.service';
 import { Article } from '../article';
 import { ARTICLES } from '../mock-articles';
 import { SharedService } from '../shared.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-new-article',
@@ -16,13 +17,15 @@ export class NewArticleComponent implements OnInit {
   title="New Article"
   newArticleForm: FormGroup;
   articles: Article[] = [];
+  newArticleImg;
   newArticleId;
 
   constructor(
+    private router: Router,
     private articleService: ArticleService,
     private titleService: Title,
     private sharedService: SharedService,
-    public fb: FormBuilder
+    public fb: FormBuilder,
   ) { 
     this.newArticleForm = fb.group({
       'articleTitle': ["", Validators.required],
@@ -44,15 +47,30 @@ export class NewArticleComponent implements OnInit {
     console.log(this.articles);
   }
 
+  // upload img
+  onFileSelected(event){
+    // this.newArticleImg = <File>event.target.files[0];
+    // console.log(event.target.files[0])
+    let reader = new FileReader();
+    reader.readAsDataURL(event.target.files[0]);
+    reader.onload = (_event) => {
+      this.newArticleImg = reader.result;
+    }
+  }
+
   publishArticle(): void {
+
     // id
     this.newArticleId = this.articles.length + 1
 
+
+    // validation form
     if(!this.newArticleForm.valid){
       alert("compila tutti i campi obbligatori");
       return;
     }
 
+    // push the article
     this.articles.push(
       {
         id: this.newArticleId,
@@ -61,10 +79,11 @@ export class NewArticleComponent implements OnInit {
         date: new Date(),
         content: this.newArticleForm.controls['ArticleContent'].value,
         description: this.newArticleForm.controls['ArticleDescription'].value,
-        imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/c/cf/Angular_full_color_logo.svg'
+        imageUrl: this.newArticleImg
       }
     );
 
-    console.log(this.articles);
+    // go to homepage
+    this.router.navigateByUrl('');
   }
 }

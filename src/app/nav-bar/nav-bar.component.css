@@ -1,42 +1,73 @@
+*{
+    color: #ffffff;
+}
+
 header{
     display: flex;
     flex-direction: column;
+    justify-content: center;
     margin-bottom: 25px;
 }
 .header{
     display: flex;
     align-items: center;
-    margin-left: 9.5%;
+    width: calc(100% - (10%*2));
+    margin: 0 9.5%;
 }
 h1{
+    font-weight: unset;
     font-size: 2em;
     padding: 7px;
 }
-h1 span{
-    color: red
+.img-container{
+    width: 350px;
+    height: 108px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+.img-container img{
+    width: 100px;
+}
+.img-container span{
+    align-self: center;
+}
+.img-container .blog{
+    margin-left: 10px;
+    margin-top: 7px;
+    font-size: 0.7em;
+    color: #e93d33;
 }
 
-
-
 nav{
-    margin-left: 50px;
+    width: 100%;
+    padding-bottom: 15px;
+    margin: 0 50px;
+    border-bottom: 2px solid white;
 }
 nav a{
     font-size: 1.2em;
-    margin-left: 15px;
+    margin-left: 5%;
+    padding-bottom: 15px; 
 }
 nav a:first-of-type{
-    margin-left: 0
+    margin-left: 0;
+    
 }
 nav a:hover{
-    color: red;
-    transition: 0.2s;
+    border-bottom: 2px solid #e93d33;
+    transition: 0.1s ease-in;
 }
 
-.separator{
-    width: calc(100% - 20%);
-    margin: 0 10%;
-    height: 2px;
-    border-radius: 15px;
-    background-color: red;
+.add-article{
+    width: 300px;
+    margin: 0 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.add-article a{
+    background-color: #e93d33;
+    border-radius: 30px;
+    padding: 8px 25px;
 }

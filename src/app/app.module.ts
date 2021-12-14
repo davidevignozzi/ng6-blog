@@ -16,10 +16,10 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms'; //module
 const appRoutes: Routes = [
   { path: 'articles', component:ArticleListComponent },
   { path: 'about', component:AboutComponent },
+  { path: '404', component:NotFoundComponent },
   { path: 'new', component:NewArticleComponent },
   { path: '', component:ArticleListComponent },
   { path: ':key', component:ArticleComponent },
-  { path: '404', component:NotFoundComponent },
   { path: '**', component:NotFoundComponent },
 ];
 

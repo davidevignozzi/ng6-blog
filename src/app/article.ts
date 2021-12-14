@@ -5,5 +5,5 @@ export class Article {
     date: Date = new Date();
     content = '';
     description = '';
-    imageUrl = '';
+    imageUrl;
 }

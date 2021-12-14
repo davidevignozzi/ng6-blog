@@ -1,7 +1,8 @@
 <div class="new-article">
   <form (ngSubmit)="publishArticle()" [formGroup]="newArticleForm">
     <div class="set-img">
-      
+      <input type="file" id="articleImg" (change)="onFileSelected($event)">
+      <img [src]="newArticleImg" *ngIf="newArticleImg" style="height: 100px;">
     </div>
     <div class="set-title">
       <input type="text" id="articleTitle" #articleTitle placeholder="Title" formControlName ="articleTitle">
