@@ -1,12 +1,10 @@
 .article{
     height: 83vh;
-    margin: 0 10%;
 }
 .container{
     display: flex;
     align-self: center;
-    justify-content: center;
-    align-content: center;
+    align-items: center;
 }
 .article-img{
     width: 530px;
