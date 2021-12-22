@@ -1,8 +1,13 @@
 /* row */
+.cont{
+    height: 82vh;
+}
 .row{
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
+    margin: 0 65px;
+    margin-top: 55px;
 }
 
 /* card */
@@ -10,6 +15,11 @@
     width: 281px;
     border-top-left-radius: 30px;
     border-top-right-radius: 30px;
+    margin-left: 46px;
+    margin-bottom: 60px;
+}
+.card:first{
+    margin-left: 0;
 }
 /* img */
 .img-container{

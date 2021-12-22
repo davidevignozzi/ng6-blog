@@ -1,22 +1,30 @@
 <div class="new-article">
+  <h1>CREATE NEW ARTICLE</h1>
+
   <form (ngSubmit)="publishArticle()" [formGroup]="newArticleForm">
-    <div class="set-img">
-      <input type="file" id="articleImg" (change)="onFileSelected($event)">
-      <img [src]="newArticleImg" *ngIf="newArticleImg" style="height: 100px;">
+    <div class="wrap">
+      <div class="set-others">
+        <div class="set-title">
+          <input type="text" id="articleTitle" #articleTitle placeholder="Title" formControlName ="articleTitle">
+        </div>
+        <div class="description">
+          <input type="text" id="ArticleDescription" placeholder="Description" formControlName ="ArticleDescription">
+        </div>
+        <div class="key">
+          <input type="text" id="ArticleKey" placeholder="Key" formControlName ="ArticleKey">
+        </div>
+      </div>
+
+      <div class="set-img">
+        <input type="file" id="articleImg" (change)="onFileSelected($event)">
+        <img [src]="newArticleImg" *ngIf="newArticleImg" style="display: none;">
+      </div>
     </div>
-    <div class="set-title">
-      <input type="text" id="articleTitle" #articleTitle placeholder="Title" formControlName ="articleTitle">
-    </div>
-    <div class="description">
-      <input type="text" id="ArticleDescription" placeholder="description" formControlName ="ArticleDescription">
-    </div>
-    <div class="key">
-      <input type="text" id="ArticleKey" placeholder="key" formControlName ="ArticleKey">
-    </div>
+    
     <div class="set-content">
       <textarea id="ArticleContent" placeholder="Content" formControlName ="ArticleContent"></textarea>
     </div>
-    <input type="submit" value="Publish">
+    <button type="submit">PUBLISH ARTICLE</button>
   </form>
 </div>
 
